@@ -36,8 +36,8 @@ export type DeepReadonly<T> = {
 }
 ```
 
-After that I tried to iterate over the object to see if the `T[Key]` was a `Record` or not without success.
-Then I, after I investigated if recursion was posible in Typescript, I realized I could use it to come up with a solution:
+After that, I tried to iterate over the object to see if `T[Key]` was a `Record` or not without success.
+Then I investigated if recursion was posible in Typescript. That'ts when I came up with the following solution:
 
 ```typescript
 export type DeepReadonly<T> = {
